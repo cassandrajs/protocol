@@ -1,0 +1,30 @@
+import Long from "long";
+import { InetAddress } from "../../src/util/InetAddress";
+import { MockBinaryStringElement } from "./MockBinaryStringElement";
+export declare class MockBinaryString {
+    elements: MockBinaryStringElement[];
+    mark: MockBinaryStringElement[];
+    byte_(value: number): MockBinaryString;
+    int_(value: number): MockBinaryString;
+    inetAddr(host: InetAddress): MockBinaryString;
+    long_(value: Long): MockBinaryString;
+    unsignedShort(value: number): MockBinaryString;
+    string(value: string): MockBinaryString;
+    longString(value: string): MockBinaryString;
+    bytes(value: string): MockBinaryString;
+    shortBytes(value: string): MockBinaryString;
+    append(other: MockBinaryString): MockBinaryString;
+    markReaderIndex(): void;
+    resetReaderIndex(): void;
+    copy(): MockBinaryString;
+    size(): number;
+    slice(targetSize: number): MockBinaryString;
+    pop(): MockBinaryStringElement;
+    pollFirst(): MockBinaryStringElement;
+    pollLast(): MockBinaryStringElement;
+    private appendElement;
+    private prependElement;
+    equals(other: any): boolean;
+    hashCode(): number;
+    toString(): string;
+}

@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"module": "esnext",
+		"target": "ESNext",
+		"declaration": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
+	},
+	"include": ["src", "test/binary"],
+	"exclude": ["node_modules", "dist"]
+}

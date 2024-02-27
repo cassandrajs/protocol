@@ -1,0 +1,34 @@
+import Long from "long";
+import { PrimitiveCodec } from "../../src/PrimitiveCodec";
+import { InetAddress } from "../../src/util/InetAddress";
+import { MockBinaryString } from "./MockBinaryString";
+export declare class MockPrimitiveCodec extends PrimitiveCodec<MockBinaryString> {
+    static INSTANCE: MockPrimitiveCodec;
+    allocate: (size: number) => MockBinaryString;
+    release: (toRelease: MockBinaryString) => void;
+    sizeOf: (toMeasure: MockBinaryString) => number;
+    resetReaderIndex: (source: MockBinaryString) => void;
+    markReaderIndex: (source: MockBinaryString) => void;
+    concat: (left: MockBinaryString, right: MockBinaryString) => MockBinaryString;
+    readByte: (source: MockBinaryString) => number;
+    readInt(source: MockBinaryString, offset?: number): number;
+    readInetAddr: (source: MockBinaryString) => InetAddress;
+    readLong: (source: MockBinaryString) => Long;
+    readUnsignedShort: (source: MockBinaryString) => number;
+    readBytes: (source: MockBinaryString) => Uint8Array;
+    readShortBytes: (source: MockBinaryString) => number[];
+    readString: (source: MockBinaryString) => string;
+    readLongString: (source: MockBinaryString) => string;
+    readRetainedSlice: (source: MockBinaryString, sliceLength: number) => MockBinaryString;
+    updateCrc(source: MockBinaryString, crc: any): void;
+    writeByte(b: number, dest: MockBinaryString): void;
+    writeInt(i: number, dest: MockBinaryString): void;
+    writeInetAddr(address: InetAddress, dest: MockBinaryString): void;
+    writeLong(l: Long, dest: MockBinaryString): void;
+    writeUnsignedShort(i: number, dest: MockBinaryString): void;
+    writeString(s: string, dest: MockBinaryString): void;
+    writeLongString(s: string, dest: MockBinaryString): void;
+    writeBytes(bytes: Uint8Array | number[], dest: MockBinaryString): void;
+    writeShortBytes(bytes: number[], dest: MockBinaryString): void;
+    private pop;
+}

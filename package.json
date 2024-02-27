@@ -1,0 +1,34 @@
+{
+	"name": "@cassandrajs/protocol",
+	"version": "1.0.0",
+	"author": "Payello <devsupport@payello.com> (https://payello.com/)",
+	"displayName": "Native Protocol for Apache Cassandra",
+	"description": "The frames and messages of the Apache Cassandra® native protocol, with the associated serialization and deserialization logic. A port of https://github.com/datastax/native-protocol/",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"type": "module",
+	"scripts": {
+		"build": "tsc --build --clean && tsc",
+		"watch": "tsc --watch",
+		"mkindex": "node .mkindex.js",
+		"prepare": "npm run build",
+		"prettify": "prettier --write ."
+	},
+	"devDependencies": {
+		"@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+		"glob": "^10.3.10",
+		"prettier": "^3.2.5",
+		"typescript": "^5.3.3"
+	},
+	"files": [
+		"dist/*"
+	],
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cassandrajs/protocol"
+	},
+	"dependencies": {
+		"long": "^5.2.3"
+	}
+}
