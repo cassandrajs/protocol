@@ -51,7 +51,7 @@ export class MockCompressor extends Compressor<MockBinaryString> {
 	prime(
 		decompressed: MockBinaryString,
 		compressed: MockBinaryString
-	): MockBinaryString {
+	): MockBinaryString | null {
 		if (this.decompressedToCompressed.containsKey(decompressed)) {
 			return this.decompressedToCompressed.get(decompressed)
 		} else if (this.compressedToDecompressed.containsKey(compressed)) {

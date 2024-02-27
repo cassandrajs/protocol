@@ -1,6 +1,6 @@
 {
 	"name": "@cassandrajs/protocol",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Payello <devsupport@payello.com> (https://payello.com/)",
 	"displayName": "Native Protocol for Apache Cassandra",
 	"description": "The frames and messages of the Apache Cassandra® native protocol, with the associated serialization and deserialization logic. A port of https://github.com/datastax/native-protocol/",
@@ -8,7 +8,7 @@
 	"types": "dist/index.d.ts",
 	"type": "module",
 	"scripts": {
-		"build": "tsc --build --clean && tsc",
+		"build": "echo Prettifying && npm run prettify && echo Making index && npm run mkindex && echo Cleaning dist folder && tsc --build --clean && echo Building && tsc && echo Done",
 		"watch": "tsc --watch",
 		"mkindex": "node .mkindex.js",
 		"prepare": "npm run build",

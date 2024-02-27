@@ -10,6 +10,7 @@
 		"isolatedModules": true,
 		"skipLibCheck": true
 	},
-	"include": ["src", "test/binary"],
-	"exclude": ["node_modules", "dist"]
+	"include": ["src"],
+	"exclude": ["node_modules", "dist"],
+	"files": ["src/index.ts"]
 }
