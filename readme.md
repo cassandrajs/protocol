@@ -1,4 +1,4 @@
-# Cassandra Protocol
+# CassandraJS Protocol
 
 This is a set of classes and types representing the frames and messages of the Apache Cassandra® native protocol, with the associated serialization and deserialization logic.
 
