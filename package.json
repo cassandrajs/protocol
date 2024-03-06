@@ -1,6 +1,6 @@
 {
 	"name": "@cassandrajs/protocol",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"author": "Payello <devsupport@payello.com> (https://payello.com/)",
 	"displayName": "Native Protocol for Apache Cassandra",
 	"description": "The frames and messages of the Apache Cassandra® native protocol, with the associated serialization and deserialization logic. A port of https://github.com/datastax/native-protocol/ to TypeScript",
